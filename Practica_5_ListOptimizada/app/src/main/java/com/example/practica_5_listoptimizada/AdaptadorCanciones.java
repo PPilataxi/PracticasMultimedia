@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AdaptadorCanciones extends RecyclerView.Adapter<AdaptadorCanciones.CancionesViewHolder> {
@@ -19,6 +20,8 @@ public class AdaptadorCanciones extends RecyclerView.Adapter<AdaptadorCanciones.
         this.context = context;
     }
 
+    //Crea cada elemento de la lista
+    @NonNull
     @Override
     public CancionesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -26,11 +29,13 @@ public class AdaptadorCanciones extends RecyclerView.Adapter<AdaptadorCanciones.
         return new CancionesViewHolder(view, context);
     }
 
+    //Actualiza los datos de la lista.
     @Override
-    public void onBindViewHolder(CancionesViewHolder holder, int position) {
-        holder.BindCancion(listaCanciones[position]);
+    public void onBindViewHolder(@NonNull CancionesViewHolder holder, int position) {
+        holder.BindCancion(this.listaCanciones[position]);
     }
 
+    //Calcula el número de elementos de la lista
     @Override
     public int getItemCount() {
         return listaCanciones.length;
