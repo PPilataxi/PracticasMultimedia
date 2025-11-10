@@ -26,7 +26,7 @@ public class AdaptadorCanciones extends RecyclerView.Adapter<AdaptadorCanciones.
     public CancionesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_cancion, parent, false);
-        return new CancionesViewHolder(view, context);
+        return new CancionesViewHolder(view, parent.getContext());
     }
 
     //Actualiza los datos de la lista.
@@ -46,7 +46,7 @@ public class AdaptadorCanciones extends RecyclerView.Adapter<AdaptadorCanciones.
         public TextView tituloView;
         public TextView autorView;
         public ImageView portadaView;
-        private Context context;
+        public Context context;
 
         public CancionesViewHolder(View view, Context context) {
             super(view);
