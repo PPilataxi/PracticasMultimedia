@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.practica_6_multiventana"
+    namespace = "com.example.practica_5_login"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.practica_6_multiventana"
+        applicationId = "com.example.practica_5_login"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
