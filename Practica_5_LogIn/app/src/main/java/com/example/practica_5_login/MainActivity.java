@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Switch switchRecordar;
     private TextView mensaje;
     private TextView mensaje2;
+    //comentario para git
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
