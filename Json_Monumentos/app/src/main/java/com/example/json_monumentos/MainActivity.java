@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
                                 String nombre = jsonObject.getString("nombre");
                                 String ubicacion = jsonObject.getString("ciudad");
                                 String descripcion = jsonObject.getString("descripcion");
-                                String imagen = jsonObject.has("imagen")
-                                        ? jsonObject.getString("imagen")
+                                String imagen = jsonObject.has("imagen_url")
+                                        ? jsonObject.getString("imagen_url")
                                         : "";
 
                                 Monumento monumento = new Monumento(nombre, ubicacion, descripcion, imagen);
